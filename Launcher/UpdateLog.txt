@@ -1,0 +1,3 @@
+0.3.2
+- Added update log file
+- Fixed issue with self-updater
