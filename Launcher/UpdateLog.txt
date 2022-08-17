@@ -1,3 +1,6 @@
+0.4.0
+- Added progress bar for downloads (Might be used for other stuff as well)
+
 0.3.2
 - Added update log file
 - Fixed issue with self-updater
