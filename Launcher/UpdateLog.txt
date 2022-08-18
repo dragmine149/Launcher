@@ -1,5 +1,17 @@
+0.5.0
+- Updated UI
+- Removed version selector
+- Added ability to change where apps are stored (will move apps over)
+- Added pop out menu
+- Added failed to load screen (on startup)
+- Updated button names
+- Added ability to open folder where all apps are stored
+- Added screen to change app selected (also shows local version)
+- released linux build
+
 0.4.0
 - Added progress bar for downloads (Might be used for other stuff as well)
+- Added version selector
 
 0.3.2
 - Added update log file
