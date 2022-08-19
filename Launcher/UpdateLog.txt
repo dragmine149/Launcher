@@ -1,3 +1,9 @@
+0.6.0
+- Added uninstall feature (with option to remove app data as well)
+- Fixed an issue where the app would say "uninstall" and "update to X" if you didn't have it installed.
+- Added (finally) support to see app update log in app.
+- Updated menu slide out to be quicker and smoother. (hopefully)
+
 0.5.0
 - Updated UI
 - Removed version selector
