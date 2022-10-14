@@ -44,5 +44,8 @@ def parserFunc():
     return vars(parser.parse_args())
 
 args = parserFunc()
-if str(args["skip"]).find("++skip") > -1:
+
+print(args["skip"])
+
+if str(args["skip"]).find("++skip") == -1:
     UpdateFile()
