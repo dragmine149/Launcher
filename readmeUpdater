@@ -1,0 +1,34 @@
+import os
+import time
+
+files = os.listdir("./Launcher/Versions/")
+
+latest = 0
+new = ""
+
+fileTimedata = ""
+
+for file in files:
+    mti = os.path.getmtime(f"./Launcher/Versions/{file}")
+    
+    fileTimedata += f"{file}: {mti}\t"
+    
+    if mti > latest:
+        latest = mti
+        old = new
+        new = file
+
+os.system(f"echo {fileTimedata} > fileData.recent.txt")
+
+print(latest)
+print(old)
+print(new)
+
+data = ""
+with open("README.md", "r") as f:
+    data = f.read()
+    
+data = data.replace(f"/{old}/", f"/{new}/")
+
+with open("README.md", "w") as f:
+    f.write(data)
