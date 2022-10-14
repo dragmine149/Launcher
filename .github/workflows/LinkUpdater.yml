@@ -23,6 +23,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
+      - name: test
+        run: ${{ github.event.head_commit.message }}
+      
+      - name: test2
+        run: |
+          echo "${{toJSON(github.event)}}"
+      
       # Updates the readme file (hopefully)
       - name: Readme edit
         run: python readmeUpdater
