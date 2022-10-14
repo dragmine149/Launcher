@@ -1,34 +1,48 @@
 import os
-import time
+import argparse
 
-files = os.listdir("./Launcher/Versions/")
+def UpdateFile():
+    # Get old data
+    files = os.listdir("./Launcher/Versions/")
 
-latest = 0
-new = ""
+    latest = 0
+    new = ""
 
-fileTimedata = ""
+    fileTimedata = ""
 
-for file in files:
-    mti = os.path.getmtime(f"./Launcher/Versions/{file}")
+    for file in files:
+        mti = os.path.getmtime(f"./Launcher/Versions/{file}")
+        
+        fileTimedata += f"{file}: {mti}\t"
+        
+        if mti > latest:
+            latest = mti
+            old = new
+            new = file
+
+    os.system(f"echo {fileTimedata} > fileData.recent.txt")
+
+    print(latest)
+    print(old)
+    print(new)
+
+
+    # Update
+    data = ""
+    with open("README.md", "r") as f:
+        data = f.read()
+        
+    data = data.replace(f"/{old}/", f"/{new}/")
+
+    with open("README.md", "w") as f:
+        f.write(data)
+        
+def parserFunc():
+    parser = argparse.ArgumentParser(description="Readme updater info")
+    parser.add_argument("--skip", default="")
     
-    fileTimedata += f"{file}: {mti}\t"
-    
-    if mti > latest:
-        latest = mti
-        old = new
-        new = file
+    return vars(parser.parse_args())
 
-os.system(f"echo {fileTimedata} > fileData.recent.txt")
-
-print(latest)
-print(old)
-print(new)
-
-data = ""
-with open("README.md", "r") as f:
-    data = f.read()
-    
-data = data.replace(f"/{old}/", f"/{new}/")
-
-with open("README.md", "w") as f:
-    f.write(data)
+args = parserFunc()
+if str(args["skip"]).find("++skip") > -1:
+    UpdateFile()
