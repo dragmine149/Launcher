@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: test
-        run: ${{ github.event.head_commit.message }}
+        run: echo ${{ github.event.head_commit.message }}
       
       - name: test2
         run: |
