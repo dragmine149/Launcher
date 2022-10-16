@@ -18,8 +18,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
+      - name: GithubInfo
+        run: echo '${{ toJSON(github) }}'
+
       # Updates the readme file (hopefully)
-      - name: Readme edit
+      - name: FolderCheck
         run: python FolderCheck.py -fc "${{ github.event.head_commit }}"
       
       # - name: Commit files
