@@ -1,0 +1,66 @@
+import os
+
+
+def CheckFile(path):
+    return os.path.exists(path)
+
+def check():
+    Allowed = {
+        
+    }
+    
+    for file in os.listdir('.'):
+        if os.path.isdir(f'./{file}') and not file.startswith(".") and not file.startswith("__"):
+            # File MUST contain some data, overdata is optional.
+            
+            required = {
+                "Description.txt": False,
+                "Install.txt": False,
+                "Version.txt": False,
+                
+            }
+            
+            optional = {
+                "Background.png": False,
+                "Beta.txt": False,
+                "Links.txt": False,
+                "UpdateLog.txt": False
+            }
+            
+            if CheckFile(f'./{file}/Background.png'):
+                optional["Background.png"] = True
+            
+            if CheckFile(f'./{file}/Beta.txt'):
+                optional["Beta.txt"] = True
+            
+            if CheckFile(f'./{file}/Description.txt'):
+                required["Description.txt"] = True
+            
+            if CheckFile(f'./{file}/Install.txt'):
+                required["Install.txt"] = True
+            
+            if CheckFile(f'./{file}/Links.txt'):
+                optional["Links.txt"] = True
+            
+            if CheckFile(f'./{file}/UpdateLog.txt'):
+                optional["UpdateLog.txt"] = True
+            
+            if CheckFile(f'./{file}/Version.txt'):
+                required["Version.txt"] = True
+            
+            Allowed[file] = {
+                "Accepted": required["Description.txt"] and required["Install.txt"] and required["Version.txt"],
+                "Option": optional,
+                "required": required
+            }
+            
+            if Allowed[file]["Accepted"]:
+                with open(f'Apps.txt', 'a') as f:
+                    f.write(file + '\n')
+            else:
+                raise FileNotFoundError(f"Missing data. Please examine the following data: (FileName: {file}): {Allowed[file]}")
+            
+with open('Apps.txt', 'w') as f:
+    f.write('')
+
+check()
