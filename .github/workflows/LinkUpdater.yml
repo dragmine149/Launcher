@@ -25,10 +25,10 @@ jobs:
       
       # Updates the readme file (hopefully)
       - name: Readme edit
-        run: python readmeUpdater --skip "${{ github.event.head_commit.message }}"
+        run: python FolderCheck.py -fc "${{ github.event.head_commit }}"
       
-      - name: Commit files
-        uses: EndBug/add-and-commit@v7.5.0
-        with:
-          message: "Readme updated"
-          author_name: "Readme"
+      # - name: Commit files
+      #   uses: EndBug/add-and-commit@v7.5.0
+      #   with:
+      #     message: "File checker ++skip"
+      #     author_name: "FC"
