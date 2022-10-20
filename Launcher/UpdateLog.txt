@@ -1,24 +1,38 @@
-0.6.0
+[0.6.0]
+*ADDED*
 - Added uninstall feature (with option to remove app data as well)
-- Fixed an issue where the app would say "uninstall" and "update to X" if you didn't have it installed.
 - Added (finally) support to see app update log in app.
+
+*CHANGED*
 - Updated menu slide out to be quicker and smoother. (hopefully)
 
-0.5.0
-- Updated UI
-- Removed version selector
+*FIXED*
+- Fixed an issue where the app would say "uninstall" and "update to X" if you didn't have it installed.
+
+[0.5.0]
+*ADDED*
 - Added ability to change where apps are stored (will move apps over)
 - Added pop out menu
 - Added failed to load screen (on startup)
-- Updated button names
 - Added ability to open folder where all apps are stored
 - Added screen to change app selected (also shows local version)
 - released linux build
 
-0.4.0
+*CHANGED*
+- Updated UI
+- Updated button names
+
+*REMOVED*
+- Removed version selector
+
+[0.4.0]
+*ADDED*
 - Added progress bar for downloads (Might be used for other stuff as well)
 - Added version selector
 
-0.3.2
+[0.3.2]
+*ADDED*
 - Added update log file
+
+*FIXED*
 - Fixed issue with self-updater
