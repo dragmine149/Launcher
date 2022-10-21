@@ -1,10 +1,124 @@
+[0.8.0]
+Massive (and i mean massive) rewrite and change of the whole app, basically built up from the ground up. 0.7.0 was original meant to contain new features (and change a majority of features), but i wanted to rework the networking which lead to most of the app breaking. So, i decided that a rewrite would be the best option to do. (110% worth it)
+
+*ADDED*
+- External links (Github, twitter, youtube, discord, itch.io)
+- Offline ability (use the app offline with reduced functionality)
+- Internet connectivity UI (Green = via wifi, orange = via data, red = none)
+- Tooltip UI for some ui elements
+- Version watermark (beta, alpha)
+- More debug
+- Comments to update log (quick note from me basically)
+- Beta / alpha ui for easy changing between versions.
+- Developer mode version. (Special limited version)
+- Button to close app
+
+*CHANGED*
+House Style
+- Background to a new background (Credit: me, better than solid colour)
+- default background colour (gray with the image onto)
+- Rewrote background message when loading
+- background of menu
+- colour of menu
+- Made green brighter
+
+Update log
+- How Update log script is done (Splits data up, more checks)
+- How update log looks (Instead of through the file into a scrollbar, split it up accordingly)
+- How update log is stored in this file
+- Update log error message
+- How update log is retrieved (retrieved from storage instead of from server, if app hasn't changed view)
+
+Functionality and other stuff
+- How the app select menu worked
+- Progress bar position + functionality
+- Order of items in menu
+- How installation of apps works (some verification)
+- How the app checks for apps installed
+- How networking is handled (Better request system, queue system, more progress feedback)
+- Uninstall message (background, text)
+- Unity version (2022 to 2023.1.0a14)
+
+
+*FIXED*
+- Issue where if one thing failed, everything would fail.
+- Issue where update log always says open
+- Menu resizing.
+- Issue with update log staying open after app switch (Didn't even change so, this was easier)
+
+NOT TESTED
+- Issue where it would give you the ability to update without internet.
+- Infinite hang on loading data
+
+*REMOVED*
+- Sliding menu UI
+- Issue with another item on the app select menu
+- Screen turning black on app change
+- Mac, linux builds whilst i test stuff (can't be bothered to make 3 builds per test)
+
+[0.7.0p2]
+*ADDED*
+- External links (Github, twitter, youtube, discord, itch.io)
+- Offline ability (Some data is saved so that it can still work without internet)
+- Internet connectivity UI (Green = via wifi, orange = via data, red = none)
+- Tooltip UI for some ui elements
+- Version watermark (beta, alpha)
+
+*CHANGED*
+- Rewrite of backend (Better networking, cleaner scripts, etc)
+- Default background image
+- Updated default message with more information
+- How update log is displayed (Also includes the txt file)
+- Colour scheme of the app. (No purple, lighter green)
+
+*FIXED*
+- Issue where if one thing failed, everything would fail.
+- Issue where it would give you the ability to update without internet. **TEST**
+- Infinite hang on loading data **TEST**
+- **TODO** Issue where update log always says open
+- Menu resizing.
+
+*REMOVED*
+- Menu sliding in and out
+
+[0.7.0]
+*ADDED*
+- Added external links (Github, twitter, youtube, discord, itch.io)
+- Added offline ability (so it doesn't hang on app load if you have no internet)
+- Added warning for offline.
+- Added a cache saving option (Default: on) which saves more (small) data to your device for use in case it failed to retrieve data from the web.
+- Added option to delete the saved cache.
+- Added internet connectivity UI to show how good your internet connection is.
+- Added tooltip UI over some buttons and ui elements to tell you what they do.
+- Added version watermark (Beta, alpha).
+- Added UI to join any currently active beta / alpha versions of the app.
+
+*CHANGED*
+- Changed (internally) how some debug is handled.
+- Changed default background image to one i took on hoilday at some point
+- Changed default message that you would recieve if something was to fail.
+- Changed how update log is displayed (the text file)
+- Changed default menu colour to be half transparent
+- Changed networking to use a new system out of the way of the normal system
+
+*FIXED*
+- Fixed an issue where the first thing that failed to load would break the whole app (other things wouldn't)
+- Fixed an issue where if you didn't have internet connection the app would say "Update to" if an update was detected beforehand.
+- Fixed an issue where having no / very little internet connection would cause an infinite hang (aprox 90seconds) on loading two things.
+- Fixed an issue where the update log menu text will always say "Open Update Log" even if it is already opened.
+- Fixed some stuff with menu resizing
+
+*REMOVED*
+- Removed menu sliding in and out (going to redesign it at some point)
+- Removed the ability to update if you are on the beta branch.
+
 [0.6.0]
 *ADDED*
 - Added uninstall feature (with option to remove app data as well)
 - Added (finally) support to see app update log in app.
 
 *CHANGED*
-- Updated menu slide out to be quicker and smoother. (hopefully)
+- Changed menu slide out to be quicker and smoother. (hopefully)
 
 *FIXED*
 - Fixed an issue where the app would say "uninstall" and "update to X" if you didn't have it installed.
@@ -36,3 +150,4 @@
 
 *FIXED*
 - Fixed issue with self-updater
+
