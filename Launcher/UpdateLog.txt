@@ -1,4 +1,26 @@
 [0.8.0]
+Some small updates, Came out of beta (0.8.0)
+
+*Added*
+- Back button to app switch ui
+
+*CHANGED*
+- menu ui colour to fit the rest (darker green)
+- connectivity ui colour to fit the menu colour (Whilst on wifi)
+- Automatically hide the menu ui when changing app
+- Switch app to a back button when on something else but the launcher
+
+*REMOVED*
+- Ability to "Hop" apps (Going from one app to another, bypassing launcher)
+
+
+[0.8.1b]
+Testing, Nothing much
+
+*CHANGED*
+- Background colour of version mark to black from white.
+
+[0.8.0b]
 Massive (and i mean massive) rewrite and change of the whole app, basically built up from the ground up. 0.7.0 was original meant to contain new features (and change a majority of features), but i wanted to rework the networking which lead to most of the app breaking. So, i decided that a rewrite would be the best option to do. (110% worth it)
 
 *ADDED*
