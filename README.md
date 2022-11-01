@@ -10,7 +10,7 @@ You do not need to update the launcher app (reinstall) to get new apps to show u
 
 ### Launcher App
 
-Get the launcher app here: <https://github.com/dragmine149/Launcher/tree/main/Launcher/Versions/0.8.0/>
+Get the launcher app here: <https://github.com/dragmine149/Launcher/tree/main/Launcher/Versions/0.8.0b/>
 
 ### Alvalible Apps
 
