@@ -1,14 +1,2 @@
-# 1.0.0
-Initial Release!
+{"1.0.0":{"Desc":"Inital Release!","Added":["Nothing"],"Changed":["Nothing"],"Removed":["Nothing"],"Fixed":["Nothing"]}}
 
-## ADDED
-- The game
-
-## Changed
-- Nothing
-
-## Removed
--- Nothing
-
-## Fixed
--- Nothing
