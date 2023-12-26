@@ -14,4 +14,4 @@ Get the launcher app here: <https://github.com/dragmine149/Launcher/tree/main/La
 
 ### Alvalible Apps
 
-All the alvalible apps are found in this file: <Apps.txt>
+All the alvalible apps are found in this file: [Apps.txt](Apps.txt)

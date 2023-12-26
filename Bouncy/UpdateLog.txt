@@ -1,0 +1,14 @@
+# 1.0.0
+Initial Release!
+
+## ADDED
+- The game
+
+## Changed
+- Nothing
+
+## Removed
+-- Nothing
+
+## Fixed
+-- Nothing

@@ -1,0 +1,6 @@
+Welcome to bouncy! However, you never do any of the bouncing.
+
+Instead, every player has their own ball which will bounce around the screen, bouncing into their opponents' balls, walls and obstacles in the playing field.
+As the balls bounce around the field, they will go over the tiles. If your cursor is in the same tile when your ball comes over it, you claim that tile.
+
+Check out the other tabs for more information about the game.
