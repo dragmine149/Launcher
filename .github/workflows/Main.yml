@@ -22,16 +22,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      
+
       # Updates the readme file (hopefully)
       - name: Readme edit
         run: python readmeUpdater --skip "${{ github.event.head_commit.message }}"
-      
+
       - name: Commit files
-        uses: EndBug/add-and-commit@v7.5.0
+        uses: EndBug/add-and-commit@v9
         with:
           message: "Readme updated"
           author_name: "Readme"
+          default_author: github_actions
 
   Checker:
     # The type of runner that the job will run on
@@ -45,9 +46,10 @@ jobs:
       # Updates the readme file (hopefully)
       - name: FolderCheck
         run: python FolderCheck
-      
+
       - name: Commit files
-        uses: EndBug/add-and-commit@v7.5.0
+        uses: EndBug/add-and-commit@v9
         with:
           message: "File checker ++skip"
           author_name: "FC"
+          default_author: github_actions
