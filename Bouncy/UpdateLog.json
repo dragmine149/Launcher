@@ -1,7 +1,7 @@
 {
   "0.5.0": {
     "Desc": "Major UI rewrok, multiplayer lobbies",
-    "Added": ["Multiplayer support for multiple devices", "Ability to change the size of the window"],
+    "Added": ["Multiplayer support! Can use either LAN games or GDSync (with some limitations) to play", "Ability to change the size of the window"],
     "Changed": ["Pretty much every single area of the interface", "Some back end code"],
     "Removed": ["Nothing"],
     "Fixed": ["Probably introduced more bugs instead"]
