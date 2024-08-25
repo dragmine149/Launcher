@@ -1,3 +1,9 @@
 {
+ "2024.825": {
+   "Description": "Test description",
+   "Added": ["Game"],
+   "Changed": ["A lot"],
+   "Removed": ["Nothing"],
+   "Fixed": ["Nothing"]
+ }
 }
-
